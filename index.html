@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+  <title>Document</title>
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#" style="font-weight: bold">
+    <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Contabilidad Fincanciera U.E.B.S
+  </a>
+</nav>
+<div class="container" id="app">
+  <br>
+  <div class="row">
+    <div class="col">
+      Agregar Entrada
+      <b-form-select v-model="selected" :options="options" @change="setType"></b-form-select>
+    </div>
+    <div class="col">
+      <br>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+        <b-form inline v-show="entry.type == 'factura'">
+            <label class="sr-only" for="inline-form-input-name">Name</label>
+            <b-input
+              id="inline-form-input-name"
+              class="mb-2 mr-sm-2 mb-sm-0"
+              placeholder="Jane Doe"
+              type="date"
+              v-model="entry.date"
+            ></b-input>
+
+            <label class="sr-only" for="inline-form-input-username">Username</label>
+            <b-input-group prepend="$" class="mb-2 mr-sm-2 mb-sm-0">
+              <b-input id="inline-form-input-username" placeholder="Entrada" v-model="entry.income"></b-input>
+            </b-input-group>
+            <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Exitencia" v-model="entry.exist"></b-input>
+            <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Unidades" v-model="entry.unity"></b-input>
+            <b-input id="inline-form-input-username"class="mb-2 mr-sm-2 mb-sm-0" placeholder="Debe" v-model="entry.due"></b-input>
+            <b-button variant="primary" style="margin-top: 10px" @click="addEntry">Guardar</b-butto>
+          </b-form>
+          <b-form inline v-show="entry.type == 'vale'">
+              <label class="sr-only" for="inline-form-input-name">Name</label>
+              <b-input
+                id="inline-form-input-name"
+                class="mb-2 mr-sm-2 mb-sm-0"
+                placeholder="Jane Doe"
+                type="date"
+                v-model="entry.date"
+              ></b-input>
+
+              <label class="sr-only" for="inline-form-input-username">Username</label>
+              <b-input-group prepend="$" class="mb-2 mr-sm-2 mb-sm-0">
+                <b-input id="inline-form-input-username" placeholder="Salida" v-model="entry.leave"></b-input>
+              </b-input-group>
+              <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Existencia" v-model="entry.exist"></b-input>
+              <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Medio" v-model="entry.medium"></b-input>
+              <b-input id="inline-form-input-username"class="mb-2 mr-sm-2 mb-sm-0" placeholder="Haber" v-model="entry.have"></b-input>
+              <b-button variant="primary" style="margin-top: 10px" @click="addEntry">Guardar</b-butto>
+            </b-form>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Concepto</th>
+                <th scope="col">Entrada</th>
+                <th scope="col">Salida</th>
+                <th scope="col">Existencia</th>
+                <th scope="col">Unitario</th>
+                <th scope="col">Medio</th>
+                <th scope="col">Debe</th>
+                <th scope="col">Haber</th>
+                <th scope="col">Saldo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="entry in listEntries">
+                <th scope="row">{{entry.date}}</th>
+                <td>-</td>
+                <td>{{entry.income}}</td>
+                <td>Salida</td>
+                <td>Existencia</td>
+                <td>{{entry.unity}}</td>
+                <td>-</td>
+                <td>{{entry.due}}</td>
+                <td>-</td>
+                <td>{{amount}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="vue.js"></script>
+<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+<script src="controller.js"></script>
+</html>
