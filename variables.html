@@ -17,7 +17,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">U.E.B.S</a>
+          <a class="nav-link" href="index.html">U.E.B.S <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="peps.html">P.E.P.S</a>
@@ -29,7 +29,7 @@
           <a class="nav-link" href="promedio.html">Costo Promedio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="variables.html">Variables  <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="variables.html">Variables</a>
         </li>
       </ul>
     </div>
@@ -38,62 +38,28 @@
   <br>
   <div class="row">
     <div class="col">
-      Agregar Entrada
+      Agregar Variable
       <b-form-select v-model="selected" :options="options" @change="setType"></b-form-select>
-    </div>
-    <div class="col">
-      <br>
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col">
-        <b-form inline v-show="entry.type == 'factura'">
+        <b-form inline>
             <label class="sr-only" for="inline-form-input-name">Name</label>
-            <b-input
-              id="inline-form-input-name"
-              class="mb-2 mr-sm-2 mb-sm-0"
-              placeholder="Jane Doe"
-              type="date"
-              v-model="entry.date"
-            ></b-input>
-
             <label class="sr-only" for="inline-form-input-username">Username</label>
             <b-input-group prepend="$" class="mb-2 mr-sm-2 mb-sm-0">
-              <b-input id="inline-form-input-username" placeholder="Entrada" v-model="entry.income"></b-input>
+              <b-input id="inline-form-input-username" placeholder="Nombre" v-model="entry.name"></b-input>
             </b-input-group>
               <!--
             <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Exitencia" v-model="entry.exist"></b-input>
               -->
-            <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Unidades" v-model="entry.unity"></b-input>
+            <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Precio" v-model="entry.precio"></b-input>
               <!--
             <b-input id="inline-form-input-username"class="mb-2 mr-sm-2 mb-sm-0" placeholder="Debe" v-model="entry.due"></b-input>
               -->
             <b-button variant="primary" style="margin-top: 10px" @click="addEntry">Guardar</b-butto>
           </b-form>
-          <b-form inline v-show="entry.type == 'vale'">
-              <label class="sr-only" for="inline-form-input-name">Name</label>
-              <b-input
-                id="inline-form-input-name"
-                class="mb-2 mr-sm-2 mb-sm-0"
-                placeholder="Jane Doe"
-                type="date"
-                v-model="entry.date"
-              ></b-input>
-
-              <label class="sr-only" for="inline-form-input-username">Username</label>
-              <b-input-group prepend="$" class="mb-2 mr-sm-2 mb-sm-0">
-                <b-input id="inline-form-input-username" placeholder="Salida" v-model="entry.leave"></b-input>
-              </b-input-group>
-              <!--
-              <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Existencia" v-model="entry.exist"></b-input>
-              -->
-              <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Medio" v-model="entry.medium"></b-input>
-              <!--
-              <b-input id="inline-form-input-username"class="mb-2 mr-sm-2 mb-sm-0" placeholder="Haber" v-model="entry.have"></b-input>
-              -->
-              <b-button variant="primary" style="margin-top: 10px" @click="addEntry">Guardar</b-butto>
-            </b-form>
     </div>
   </div>
   <br>
@@ -102,46 +68,81 @@
         <table class="table">
             <thead class="thead-dark" border="1px">
               <tr align="center">
-                <th rowspan="2">Fecha</th>
-                <th rowspan="2">Concepto</th>
-                <th colspan="3">Unidades</th>
-                <th colspan="2">Costo</th>
-                <th rowspan="2">Debe</th>
-                <th rowspan="2">Haber</th>
-                <th rowspan="2">Saldo</th>
+                <th colspan="3">Variables</th>
               </tr>
               <tr align="center">
-                  <th>Entrada</th>
-                  <th>Salida</th>
-                  <th>Existencia</th>
-                  <th>Unitario</th>
-                  <th>Medio</th>
+                  <th>Nombre</th>
+                  <th>Cargo</th>
+                  <th>Abono</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="entry in listEntries" v-if="entry.type == 'factura'" align="center">
-                <th scope="row">{{entry.date}}</th>
-                <td>-</td>
-                <td>{{entry.income}}</td>
-                <td>-</td>
-                <td>{{entry.exist}}</td>
-                <td>{{entry.unity}}</td>
-                <td>-</td>
-                <td>{{entry.due}}</td>
-                <td>-</td>
-                <td>{{entry.amount}}</td>
+              <tr v-for="entry in listEntries" align="center">
+                <th scope="row">{{entry.name}}</th>
+                <td v-if="entry.type == 'cargo'">{{entry.precio}}</td>
+                <td v-else></td>
+                <td v-if="entry.type == 'abono'">{{entry.precio}}</td>
+                <td v-else></td>
               </tr>
-              <tr v-else align="center">
-                <th scope="row">{{entry.date}}</th>
-                <td>-</td>
-                <td>-</td>
-                <td>{{entry.leave}}</td>
-                <td>{{entry.exist}}</td>
-                <td>-</td>
-                <td>{{entry.medium}}</td>
-                <td>-</td>
-                <td>{{entry.have}}</td>
-                <td>{{entry.amount}}</td>
+            </tbody>
+          </table>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      Agregar Orden
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+        <b-form inline>
+            <label class="sr-only" for="inline-form-input-name">Name</label>
+            <label class="sr-only" for="inline-form-input-username">Username</label>
+            <b-input-group prepend="$" class="mb-2 mr-sm-2 mb-sm-0">
+              <b-input id="inline-form-input-username" placeholder="Nombre" v-model="orden.name"></b-input>
+            </b-input-group>
+              <!--
+            <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Exitencia" v-model="entry.exist"></b-input>
+              -->
+            <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Fila 1" v-model="orden.file1"></b-input>
+            <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Fila 2" v-model="orden.file2"></b-input>
+            <b-input id="inline-form-input-username" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Fila 3" v-model="orden.file3"></b-input>
+              <!--
+            <b-input id="inline-form-input-username"class="mb-2 mr-sm-2 mb-sm-0" placeholder="Debe" v-model="entry.due"></b-input>
+              -->
+            <b-button variant="primary" style="margin-top: 10px" @click="addOrder">Guardar</b-butto>
+          </b-form>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark" border="1px">
+              <tr align="center">
+                <th colspan="4">Ordenes</th>
+              </tr>
+              <tr align="center">
+                  <th>Orden</th>
+                  <th>Fila 1</th>
+                  <th>Fila 2</th>
+                  <th>Fila 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="order in listOrdenes" align="center">
+                <th scope="row">{{order.name}}</th>
+                <td >{{order.file1}}</td>
+                <td >{{order.file2}}</td>
+                <td >{{order.file3}}</td>
+              </tr>
+              <tr align="center">
+                <th scope="row">TOTAL</th>
+                <td >{{sumFile1}}</td>
+                <td >{{sumFile2}}</td>
+                <td >{{sumFile3}}</td>
               </tr>
             </tbody>
           </table>
@@ -154,5 +155,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="vue.js"></script>
 <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
-<script src="controller.js"></script>
+<script src="variables.js"></script>
 </html>
