@@ -101,6 +101,58 @@ const app = new Vue({
       },
       total: 0,
     },
+    presupuesto5: {
+      semestre_one: {
+        reqXProduccion:{a:0, b: 0},
+        inventarioFinal:{a:0, b: 0},
+        necesidad:{a:0, b: 0},
+        inventarioInicial:{a:0, b: 0},
+        totalAComporar:{a:0, b: 0},
+        costoKg:{a:0, b: 0},
+        costoCompra:{a:0, b: 0},
+      },
+      presupuesto6: {
+        reqProduccion: {a: 0, b: 0},
+        horasProduccion: {a: 0, b: 0},
+        totalHoras: {a: 0, b: 0},
+        costoHoras: {a: 0, b: 0},
+        totalCostoMod: {a: 0, b: 0},
+        total: {a: 0, b: 0},
+      },
+      presupuesto7: {
+        total: 0
+      },
+      presupuesto8:{
+        materiaA: {
+          costoUnitarioDelta: 0,
+          delta: 0,
+          costoUnitarioSigma: 0,
+          sigma: 0
+        },
+        materiaB: {
+
+        },
+        primaObra: {
+
+        },
+        gastosFabricacion: {
+
+        },
+        total: 0
+      },
+      semestre_second: {
+
+      }
+    },
+    presupuesto9: {
+      materiaPrimaReq: {},
+      manoDeObra: {},
+      gastosFabricacion: {},
+      inventario: {},
+      disponible: {},
+      inventarioFinal: {},
+      costoVenta: {}
+    },
     listEntries: []
   },
   mounted: function() {
@@ -148,10 +200,12 @@ const app = new Vue({
     calculateTotalsPresupuesto3: function() {
       this.presupuesto3.materia_a.total = Number(this.presupuesto3.materia_a.delta) + Number(this.presupuesto3.materia_a.sigma)
       this.presupuesto3.materia_b.total = Number(this.presupuesto3.materia_b.delta) + Number(this.presupuesto3.materia_b.sigma)
+      this.presupuesto3.total = (Number(this.presupuesto3.materia_b.total) * Number(this.presupuesto3.materia_b.costoKg)) + (Number(this.presupuesto3.materia_a.total) * Number(this.presupuesto3.materia_a.costoKg))
     },
     calculateTotalsPresupuesto4: function() {
       this.presupuesto4.materia_a.total = Number(this.presupuesto4.materia_a.delta) + Number(this.presupuesto4.materia_a.sigma)
       this.presupuesto4.materia_b.total = Number(this.presupuesto4.materia_b.delta) + Number(this.presupuesto4.materia_b.sigma)
+      this.presupuesto4.total = (Number(this.presupuesto4.materia_b.total) * Number(this.presupuesto4.materia_b.costoKg)) + (Number(this.presupuesto4.materia_a.total) * Number(this.presupuesto4.materia_a.costoKg))
     }
   },
   filters:{
