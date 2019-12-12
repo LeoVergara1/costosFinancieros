@@ -111,7 +111,18 @@ const app = new Vue({
         costoKg:{a:0, b: 0},
         costoCompra:{a:0, b: 0},
       },
-      presupuesto6: {
+      semestre_second: {
+        reqXProduccion:{a:0, b: 0},
+        inventarioFinal:{a:0, b: 0},
+        necesidad:{a:0, b: 0},
+        inventarioInicial:{a:0, b: 0},
+        totalAComporar:{a:0, b: 0},
+        costoKg:{a:0, b: 0},
+        costoCompra:{a:0, b: 0},
+      }
+    },
+    presupuesto6: {
+      semestre_one: {
         reqProduccion: {a: 0, b: 0},
         horasProduccion: {a: 0, b: 0},
         totalHoras: {a: 0, b: 0},
@@ -119,30 +130,37 @@ const app = new Vue({
         totalCostoMod: {a: 0, b: 0},
         total: {a: 0, b: 0},
       },
-      presupuesto7: {
-        total: 0
-      },
-      presupuesto8:{
-        materiaA: {
-          costoUnitarioDelta: 0,
-          delta: 0,
-          costoUnitarioSigma: 0,
-          sigma: 0
-        },
-        materiaB: {
-
-        },
-        primaObra: {
-
-        },
-        gastosFabricacion: {
-
-        },
-        total: 0
-      },
       semestre_second: {
+        reqProduccion: {a: 0, b: 0},
+        horasProduccion: {a: 0, b: 0},
+        totalHoras: {a: 0, b: 0},
+        costoHoras: {a: 0, b: 0},
+        totalCostoMod: {a: 0, b: 0},
+        total: {a: 0, b: 0},
+      },
+    },
+    presupuesto7: {
+      a: 0,
+      b: 0,
+      total: 0
+    },
+    presupuesto8:{
+      materiaA: {
+        costoUnitarioDelta: 0,
+        delta: 0,
+        costoUnitarioSigma: 0,
+        sigma: 0
+      },
+      materiaB: {
 
-      }
+      },
+      primaObra: {
+
+      },
+      gastosFabricacion: {
+
+      },
+      total: 0
     },
     presupuesto9: {
       materiaPrimaReq: {},
