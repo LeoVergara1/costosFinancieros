@@ -366,61 +366,61 @@
             <tr>
               <td scope="row">Req X Producto</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.reqXProduccion.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.reqXProduccion.a" @keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.reqXProduccion.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.reqXProduccion.b"@keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.reqXProduccion.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.reqXProduccion.a"@keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.reqXProduccion.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.reqXProduccion.b"@keyup="calculateTotalsPresupuesto5">
               </td>
             </tr>
             <tr>
               <td scope="row">Inventario Final</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.inventarioFinal.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.inventarioFinal.a" @keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.inventarioFinal.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.inventarioFinal.b" @keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.inventarioFinal.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.inventarioFinal.a" @keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.inventarioFinal.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.inventarioFinal.b" @keyup="calculateTotalsPresupuesto5">
               </td>
             </tr>
             <tr>
               <td scope="row">Necesidad</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.necesidad.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.necesidad.a" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.necesidad.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.necesidad.b" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.necesidad.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.necesidad.a" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.necesidad.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.necesidad.b" disabled>
               </td>
             </tr>
             <tr>
               <td scope="row">Inventario Inicial</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.inventarioInicial.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.inventarioInicial.a" @keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.inventarioInicial.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.inventarioInicial.b" @keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.necesidad.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.inventarioInicial.a" @keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.necesidad.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.inventarioInicial.b" @keyup="calculateTotalsPresupuesto5">
               </td>
             </tr>
             <tr>
@@ -441,16 +441,16 @@
             <tr>
               <td scope="row">Costo por Kg</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.costoKg.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.costoKg.a"@keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.costoKg.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_one.costoKg.b"@keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.costoKg.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.costoKg.a"@keyup="calculateTotalsPresupuesto5">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.costoKg.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto5.semestre_second.costoKg.b"@keyup="calculateTotalsPresupuesto5">
               </td>
             </tr>
             <tr>
@@ -499,93 +499,78 @@
           </thead>
           <tbody>
             <tr>
-              <td scope="row">Req X Producto</td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.reqProduccion.a">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.reqProduccion.b">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.reqProduccion.a">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.reqProduccion.b">
-              </td>
-            </tr>
-            <tr>
               <td scope="row">Horas Requeridas</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.horasProduccion.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.horasProduccion.a" @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.horasProduccion.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.horasProduccion.b" @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.horasProduccion.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.horasProduccion.a" @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.horasProduccion.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.horasProduccion.b" @keyup="calculateTotalsPresupuesto6">
               </td>
             </tr>
             <tr>
               <td scope="row">Total de horas</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.totalHoras.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.totalHoras.a"  @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.totalHoras.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.totalHoras.b" @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.totalHoras.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.totalHoras.a" @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-            <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.totalHoras.b">
+            <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.totalHoras.b" @keyup="calculateTotalsPresupuesto6">
               </td>
             </tr>
             <tr>
               <td scope="row">Costo de Horas</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.costoHoras.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.costoHoras.a" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.costoHoras.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.costoHoras.b" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.costoHoras.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.costoHoras.a" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.costoHoras.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.costoHoras.b" disabled>
               </td>
             </tr>
             <tr>
               <td scope="row">Total de costo</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.totalCostoMod.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.totalCostoMod.a" @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.totalCostoMod.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.totalCostoMod.b" @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.totalCostoMod.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.totalCostoMod.a" @keyup="calculateTotalsPresupuesto6">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.totalCostoMod.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.totalCostoMod.b" @keyup="calculateTotalsPresupuesto6">
               </td>
             </tr>
             <tr>
               <td scope="row">Total</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.total.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.total.a" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.total.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_one.total.b" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.total.a">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.total.a" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.total.b">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto6.semestre_second.total.b" disabled>
               </td>
             </tr>
           </tbody>
@@ -602,13 +587,13 @@
     </div>
     <div class="row">
       <div class="col">
-        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto7.a">
+        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto7.a"  @keyup="calculateTotalsPresupuesto7">
       </div>
       <div class="col">
-        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto7.b">
+        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto7.b" @keyup="calculateTotalsPresupuesto7">
       </div>
       <div class="col">
-        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto7.total">
+        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto7.total" @keyup="calculateTotalsPresupuesto7" disabled>
       </div>
     </div>
     <br>
@@ -627,90 +612,144 @@
             <tr align="center">
               <th rowspan="1"></th>
               <th colspan="2">Primer Semestre</th>
-              <th colspan="2">Segundo Trimestre</th>
+              <th colspan="2">Segundo Semestre</th>
             </tr>
             <tr align="center">
               <th></th>
-              <th>A</th>
-              <th>B</th>
-              <th>A</th>
-              <th>B</th>
+              <th>Costo Unitario</th>
+              <th>Delta</th>
+              <th>Costo Unitario</th>
+              <th>Sigma</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td scope="row">Req X Producto</td>
+              <td scope="row">Materia Prima A</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <div class="row">
+                  <div class="col">
+                    <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaA.costoUnitarioDelta"  @keyup="calculateTotalsPresupuesto8">
+                  </div>
+                  <div class="col">
+                    <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaA.multiDelta" @keyup="calculateTotalsPresupuesto8">
+                  </div>
+                </div>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaA.delta" disabled>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <div class="row">
+                  <div class="col">
+                    <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaA.costoUnitarioSigma" @keyup="calculateTotalsPresupuesto8">
+                  </div>
+                  <div class="col">
+                    <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaA.multiSigma" @keyup="calculateTotalsPresupuesto8">
+                  </div>
+                </div>
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-            </tr>
-            <tr>
-              <td scope="row">Inventario Final</td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-            </tr>
-            <tr>
-              <td scope="row">Necesidad</td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaA.sigma" disabled>
               </td>
             </tr>
             <tr>
-              <td scope="row">Inventario Inicial</td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-            </tr>
+                <td scope="row">Materia Prima B</td>
+                <td>
+                  <div class="row">
+                    <div class="col">
+                      <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaB.costoUnitarioDelta" @keyup="calculateTotalsPresupuesto8">
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaB.multiDelta" @keyup="calculateTotalsPresupuesto8">
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaB.delta" disabled>
+                </td>
+                <td>
+                  <div class="row">
+                    <div class="col">
+                      <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaB.costoUnitarioSigma" @keyup="calculateTotalsPresupuesto8">
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaB.multiSigma" @keyup="calculateTotalsPresupuesto8">
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.materiaB.sigma" disabled>
+                </td>
+              </tr>
+              <tr>
+                  <td scope="row">Mano de Obra</td>
+                  <td>
+                    <div class="row">
+                      <div class="col">
+                        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.primaObra.costoUnitarioDelta" @keyup="calculateTotalsPresupuesto8">
+                      </div>
+                      <div class="col">
+                        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.primaObra.multiDelta" @keyup="calculateTotalsPresupuesto8">
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.primaObra.delta" disabled>
+                  </td>
+                  <td>
+                    <div class="row">
+                      <div class="col">
+                        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.primaObra.costoUnitarioSigma" @keyup="calculateTotalsPresupuesto8">
+                      </div>
+                      <div class="col">
+                        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.primaObra.multiSigma" @keyup="calculateTotalsPresupuesto8" >
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.primaObra.sigma" disabled>
+                  </td>
+                </tr>
+                <tr>
+                    <td scope="row">Gastos Indirector de Fabricación</td>
+                    <td>
+                      <div class="row">
+                        <div class="col">
+                          <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.gastosFabricacion.costoUnitarioDelta" @keyup="calculateTotalsPresupuesto8">
+                        </div>
+                        <div class="col">
+                          <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.gastosFabricacion.multiDelta" @keyup="calculateTotalsPresupuesto8">
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.gastosFabricacion.delta" disabled>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <div class="col">
+                          <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.gastosFabricacion.costoUnitarioSigma" @keyup="calculateTotalsPresupuesto8">
+                        </div>
+                        <div class="col">
+                          <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.gastosFabricacion.multiSigma" @keyup="calculateTotalsPresupuesto8">
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto8.gastosFabricacion.sigma" disabled>
+                    </td>
+                  </tr>
             <tr>
-              <td scope="row">Producción</td>
+              <td scope="row">Total</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" disabled v-model="presupuesto8.totalDelta">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" disabled  v-model="presupuesto8.totalSigma">
               </td>
             </tr>
           </tbody>
@@ -730,109 +769,99 @@
         <table class="table">
           <thead class="thead-inverse">
             <tr align="center">
-              <th rowspan="1"></th>
-              <th colspan="2">Primer Semestre</th>
-              <th colspan="2">Segundo Trimestre</th>
-            </tr>
-            <tr align="center">
               <th></th>
               <th>A</th>
               <th>B</th>
-              <th>A</th>
-              <th>B</th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td scope="row">Materia prima Req.</td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.materiaPrimaReq.a" @keyup="calculateTotalsPresupuesto9">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.materiaPrimaReq.b" @keyup="calculateTotalsPresupuesto9">
               </td>
               <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.materiaPrimaReq.total" disabled>
               </td>
             </tr>
             <tr>
-              <td scope="row">Mano de Obra</td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-            </tr>
-            <tr>
-              <td scope="row">Gastos </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-            </tr>
-            <tr>
-              <td scope="row">Costos de producción</td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-            </tr>
-            <tr>
-              <td scope="row">Disponible</td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-              <td>
-                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              </td>
-            </tr>
-            <tr>
-                <td scope="row">Disponible</td>
+                <td scope="row">Mano de Obra</td>
                 <td>
-                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.manoDeObra.a" @keyup="calculateTotalsPresupuesto9">
                 </td>
                 <td>
-                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.manoDeObra.b" @keyup="calculateTotalsPresupuesto9">
                 </td>
                 <td>
-                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-                </td>
-                <td>
-                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.manoDeObra.total" disabled>
                 </td>
               </tr>
+            <tr>
+                <td scope="row">Gastos indirectos de Fabricación</td>
+                <td>
+                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.gastosFabricacion.a" @keyup="calculateTotalsPresupuesto9">
+                </td>
+                <td>
+                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.gastosFabricacion.b" @keyup="calculateTotalsPresupuesto9">
+                </td>
+                <td>
+                  <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.gastosFabricacion.total" disabled>
+                </td>
+              </tr>
+              <tr>
+                  <td scope="row">Costo de Producción</td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                    <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.costosProduccion.total" disabled>
+                  </td>
+                </tr>
+                <tr>
+                    <td scope="row">Inventario de Articulos Terminados</td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                      <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.inventarioTerminado.total" @keyup="calculateTotalsPresupuesto9">
+                    </td>
+                  </tr>
+                <tr>
+                    <td scope="row">Disponible</td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                      <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.disponible.total" disabled>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td scope="row">Inventario Final Terminado</td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                        <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.inventarioFinal.total" @keyup="calculateTotalsPresupuesto9">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Costo de Venta</td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                          <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" v-model="presupuesto9.costoVenta.total" disabled>
+                        </td>
+                      </tr>
           </tbody>
         </table>
       </div>
